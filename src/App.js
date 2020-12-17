@@ -1,14 +1,15 @@
 import React from "react";
 import './App.css';
+import headerImage from "./images/headerimage.png";
 function App() {
   return (
     <div className="App">
-      <div className="container">
-      <header className="App-header">
-        <h1>
-          Hello World
-        </h1>
+      <header>
+        <img src={headerImage} alt="Haapy World" /> 
+        <h1>What temperature is it ?</h1>
       </header>
+      <div className="container">
+    
       </div>
     </div>
   );

@@ -1,9 +1,10 @@
 body {
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 200%);
   background-image: url("./images/wallpaper.jpg");
   background-size: cover;
   background-position-x: center;
- 
+  background-repeat: no-repeat;
+  
 }
 
 
