@@ -5,8 +5,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img src={headerImage} alt="Haapy World" /> 
-        <h1>What temperature is it ?</h1>
+        <img src={headerImage} alt="Haapy World" /> <h1>What temperature is it ?</h1>
       </header>
       <div className="container">
     
