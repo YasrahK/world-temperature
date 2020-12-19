@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+/*import React, {useState} from "react";
 import './AddNewCity.css';
 
 export default function AddNewCity(){
@@ -28,4 +28,4 @@ const[click, setClick]=useState(false)
        </div> 
     );
 }
-}
+} */
