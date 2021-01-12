@@ -1,5 +1,7 @@
 import React from "react";
-import Weather from "./Weather";
+import Weather from "./Weather"; 
+import "./Fontawesome";
+
 import './App.css';
 import headerImage from "./images/globe.png";
 export default function App() {
@@ -11,27 +13,34 @@ export default function App() {
         <h1>What temperature is it ?</h1>
       </header>
    
-        <div className="WeatherApp">
-        <form className="searchEngine">
-           <div className="row">
-             <div className="col-6">
-               <input type="search" className="form-control" autoFocus="on" placeholder="Enter a place..."/>
-               </div>
-               <div className="col-3">
-           <input type="submit" value="search" className="btn btn-primary w-250" /></div>
-           <div className="col-3">
-           <input type="button" value="📍" className="btn btn-primary w-100" /></div>
+        <div className="WeatherApp row">
+          <div className="col">
+            <Weather defaultCity="Chicago"/>
+          </div>
+          <div className="col">
+            <Weather defaultCity="London"/>
+          </div>
+          <div className="col">
+            <Weather defaultCity="Karachi"/>
+          </div>
+          <div className="col">
+            <Weather defaultCity="Malaysia"/>
+          </div>
+          <div className="col">
+            <Weather defaultCity="Bali"/>
+          </div>
+          <div className="col">
+            <Weather defaultCity="Istanbul"/>
+          </div>
            </div>
-         </form>
-         <Weather />
-        </div>
-        </div>
       <footer className="mt-5">
         <p>
           💻 Open-source code by Yasrah Kapadia
         </p>
       </footer>
       </div>
+      </div>
+    
   );
 }
 
