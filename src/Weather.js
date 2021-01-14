@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import './Weather.css';
+import WeatherInfo from "./WeatherInfo";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import axios from "axios"
 
+
 export default function Weather(props){
-  const[city, setCity]= useState(null);
+  const[city, setCity]= useState(props.defaultCity); //unless you don't change the state from null its will show loading
   const[weatherInfo, setWeatherInfo]= useState({searched:false});
 
   function handleResponse(response){
@@ -18,7 +20,8 @@ export default function Weather(props){
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
-      searched:true
+      searched:true, 
+      date: new Date (response.data.dt*1000)
     });
   }
 
@@ -29,7 +32,7 @@ export default function Weather(props){
     axios.get(apiUrl).then(handleResponse)
   }
 
-  function handleSUbmit(event){
+  function handleSubmit(event){
     event.preventDefault();
     search();
   }
@@ -49,7 +52,7 @@ function showPosition(position){
   let longitude= position.coords.longitude;
   const apiKey= `5fc324aaf951a7a1b818994b70c47e36`
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
-  axios.get(apiUrl).then(showPosition)
+  axios.get(apiUrl).then(handleResponse)
 }
 
 function getCurrentLocation(event){
@@ -60,14 +63,14 @@ function getCurrentLocation(event){
   let form = (
   <div className="searchEngine row">
   <div className="col-10">
-     <form onSubmit={handleSUbmit}>
+     <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
          <input type="search" className="form-control" autoFocus="on" placeholder="Enter a place..." onChange={handleCityChange}/>
          </div>
          <div className="col-3">
-     <input type="submit" value="search" className="btn btn-primary w-250" /><
-       /div>
+     <input type="submit" value="search" className="btn btn-primary w-250" />
+     </div>
        </div>
    </form>
    </div>
@@ -80,7 +83,7 @@ function getCurrentLocation(event){
     return(
       <div className="Weather">
         {form}
-  
+        <WeatherInfo data={weatherInfo} />
       </div>
 
     );
@@ -88,7 +91,7 @@ function getCurrentLocation(event){
     search();
     return(
       <div className="Weather col">
-        <FontAwesomeIcon icon="spinner" pulse size={"3x"} />
+        Loading... 
       </div>
         
     );

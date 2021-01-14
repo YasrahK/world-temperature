@@ -1,15 +1,17 @@
 import React from "react";
 import Weather from "./Weather"; 
 import "./Fontawesome";
-
+import AddNewCity from "./AddNewCity"
 import './App.css';
 import headerImage from "./images/globe.png";
+
+
 export default function App() {
   return (
     <div className="App">
          <div className="container">  
       <header>
-        <img src={headerImage} alt="Hapy World" /> 
+        <img src={headerImage} alt="Happy World" /> 
         <h1>What temperature is it ?</h1>
       </header>
    
@@ -18,19 +20,19 @@ export default function App() {
             <Weather defaultCity="Chicago"/>
           </div>
           <div className="col">
-            <Weather defaultCity="London"/>
+            <AddNewCity defaultCity="London"/>
           </div>
           <div className="col">
-            <Weather defaultCity="Karachi"/>
+            <AddNewCity defaultCity="Karachi"/>
           </div>
           <div className="col">
-            <Weather defaultCity="Malaysia"/>
+            <AddNewCity defaultCity="Malaysia"/>
           </div>
           <div className="col">
-            <Weather defaultCity="Bali"/>
+            <AddNewCity defaultCity="Bali"/>
           </div>
           <div className="col">
-            <Weather defaultCity="Istanbul"/>
+            <AddNewCity defaultCity="Istanbul"/>
           </div>
            </div>
       <footer className="mt-5">
