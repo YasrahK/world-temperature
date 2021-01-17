@@ -1,0 +1,10 @@
+.DisplayWeather canvas{ 
+       height: 100px;
+       width: 100px;
+       left: -10px;
+       top: -75px;
+       opacity: 0.8;  
+}
+  .DisplayWeather .temperatureDisplay{
+        margin-top: 20px;
+  }

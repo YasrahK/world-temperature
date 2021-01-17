@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import './Weather.css';
-import WeatherInfo from "./WeatherInfo";
+import DisplayWeather from "./DisplayWeather";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import axios from "axios"
+import axios from "axios";
 
 
 export default function Weather(props){
@@ -20,8 +20,8 @@ export default function Weather(props){
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
+      date: new Date (response.data.dt*1000),
       searched:true, 
-      date: new Date (response.data.dt*1000)
     });
   }
 
@@ -36,24 +36,18 @@ export default function Weather(props){
     event.preventDefault();
     search();
   }
+  function handleCityChange(event){
+    setCity(event.target.value)
+  }
 
-function handleResponse(response){
-  console.log(response.data);
-  setWeatherInfo(true);
+  function showPosition(position){
+    let latitude= position.coord.latitude;
+    let longitude= position.coords.longitude;
+    const apiKey= `5fc324aaf951a7a1b818994b70c47e36`
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
+    axios.get(apiUrl).then(handleResponse)
+  }
 
-}
-
-function handleCityChange(event){
-  setCity(event.target.value)
-}
-
-function showPosition(position){
-  let latitude= position.coord.latitude;
-  let longitude= position.coords.longitude;
-  const apiKey= `5fc324aaf951a7a1b818994b70c47e36`
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
-  axios.get(apiUrl).then(handleResponse)
-}
 
 function getCurrentLocation(event){
   event.preventDefault();
@@ -83,7 +77,7 @@ function getCurrentLocation(event){
     return(
       <div className="Weather">
         {form}
-        <WeatherInfo data={weatherInfo} />
+        <DisplayWeather data={weatherInfo} />
       </div>
 
     );
