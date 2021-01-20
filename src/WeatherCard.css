@@ -1,0 +1,29 @@
+
+.WeatherCard {
+    max-width: 300px;
+    min-width: 300px;
+   
+}
+
+.WeatherCard p::first-letter {
+    text-transform: capitalize;
+}
+
+.WeatherCard .card{
+    border:none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 10px;
+  
+
+}
+ .DisplayWeather .card:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.WeatherCard ul{
+    list-style: none;
+    font-size: 15px;
+    padding-left: 0;
+    text-align: left;
+}

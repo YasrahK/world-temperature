@@ -1,6 +1,6 @@
 .AddNewCity .CityCard {
     height: 600px;
-    width: 350px;
+    width: 320px;
     border: none;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -11,7 +11,7 @@
     opacity: 0.5;
 }
 
-.AddNewCity >.CityCard button {
+.AddNewCity .CityCard button {
     height: 150px;
     width: 150px;
     font-size: 60px;
@@ -22,4 +22,8 @@
 
 .AddNewCity .CityCard button:hover {
     box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.AddNewCity .fa-plus {
+    color: rgb(30, 30, 30);
 }

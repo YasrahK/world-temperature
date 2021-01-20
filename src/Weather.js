@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './Weather.css';
-import DisplayWeather from "./DisplayWeather";
+import WeatherCard from "./WeatherCard";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import axios from "axios";
 
@@ -77,7 +77,7 @@ function getCurrentLocation(event){
     return(
       <div className="Weather">
         {form}
-        <DisplayWeather data={weatherInfo} />
+        <WeatherCard data={weatherInfo} />
       </div>
 
     );

@@ -1,6 +1,28 @@
-.Weather .cityName {
-    margin-top: 20px;
+.Weather, 
+.Weather .WeatherCard,
+.Weather .searchEngine{
+    margin: 10 auto;
+ 
 }
-.Weather .dateTime {
-    font-size: 14px;
+
+
+.Weather .searchEngine{
+    max-width: 350px;
+ 
 }
+
+.Weather form .col-9,
+.Weather form .col-10,
+.Weather form .col-3,
+.Weather form .col-2,
+.Weather .searchEngine .col-2{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.Weather form{
+    text-align: center;
+    margin-left: 15px;
+
+}
+

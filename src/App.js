@@ -12,28 +12,29 @@ export default function App() {
          <div className="container">  
       <header>
         <img src={headerImage} alt="Happy World" /> 
-        <h1>What temperature is it ?</h1>
+        <h1>What temperature is it?</h1>
       </header>
    
-        <div className="WeatherApp row">
-          <div className="col">
+        <div className="WeatherApp row mt-5">
+         <div className="col-4">
             <Weather defaultCity="Chicago"/>
           </div>
-          <div className="col">
+          <div className="col-4">
             <AddNewCity defaultCity="London"/>
           </div>
-          <div className="col">
+          <div className="col-4">
             <AddNewCity defaultCity="Karachi"/>
           </div>
-          <div className="col">
+          <div className="col-4">
             <AddNewCity defaultCity="Malaysia"/>
           </div>
-          <div className="col">
+          <div className="col-4">
             <AddNewCity defaultCity="Bali"/>
           </div>
-          <div className="col">
+          <div className="col-4">
             <AddNewCity defaultCity="Istanbul"/>
           </div>
+           </div>
            </div>
       <footer className="mt-5">
         <p>
@@ -41,7 +42,7 @@ export default function App() {
         </p>
       </footer>
       </div>
-      </div>
+    
     
   );
 }
