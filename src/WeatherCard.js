@@ -9,6 +9,7 @@ export default function WeatherCard(props){
 return(
     <div className="WeatherCard">
       <div className="card mt-2 mb-5 ">
+        <div className="card-body">
                 <h1> {props.data.city} </h1>
         <h2 className="description text-capitalize">{props.data.description}</h2>
         <h3> <FormattedDate date={props.data.date} /> </h3>
@@ -29,6 +30,7 @@ return(
                 <li><FontAwesomeIcon icon="tint"/> Humidity: {props.data.humidity}%  </li><li> <FontAwesomeIcon icon="wind"/> Wind:{Math.round(props.data.wind)} km/hr </li> <li> <FontAwesomeIcon icon="thermometer-full"/> Feels like: {Math.round(props.data.feels_like)}°</li> 
                  </ul>
              </div>
+           </div>
            </div>
            </div>
            </div>
