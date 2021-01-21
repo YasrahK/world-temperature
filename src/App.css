@@ -39,6 +39,10 @@ padding: 30px 20px;
   padding-bottom: 100px;
 }
 
+.App .WeatherApp{
+  color: #0f0e0d;
+}
+
 
 .footer {
   font-size: 10px;

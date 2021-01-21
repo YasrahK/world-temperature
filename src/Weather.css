@@ -5,9 +5,13 @@
  
 }
 
+.Weather {
+    background-color: cadetblue;
+}
 
 .Weather .searchEngine{
     max-width: 350px;
+    
  
 }
 

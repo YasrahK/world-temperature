@@ -2,6 +2,7 @@
 .WeatherCard {
     max-width: 300px;
     min-width: 300px;
+  
    
 }
 
@@ -14,10 +15,10 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
     border-radius: 10px;
-  
+    color: brown;
 
 }
- .DisplayWeather .card:hover {
+ .WeatherCard .card:hover {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
