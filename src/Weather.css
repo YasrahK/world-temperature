@@ -12,6 +12,16 @@
  
 }
 
+.Weather ul{
+    margin: 0;
+    padding: 0;
+  }
+  .Weather li {
+    font-size: 16px;
+    font-weight: 100;
+    list-style: none;
+  }
+
 .Weather form .col-9,
 .Weather form .col-10,
 .Weather form .col-3,

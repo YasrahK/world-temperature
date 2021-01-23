@@ -37,11 +37,11 @@ export default function App() {
           </div>
            </div>
            </div>
-      <footer className="mt-5">
-        <p>
-          💻 Open-source code by Yasrah Kapadia
-        </p>
-      </footer>
+           <footer>
+      Project coded by 
+      <a href="https://www.linkedin.com/in/yasrah-kapadia-12841196/" target="_blank" rel="noopener noreferrer"> Yasrah Kapadia </a>and is open-sourced on
+      <a href="https://github.com/YasrahK/world-temperature" target="_blank" rel="noopener noreferrer"> Git-hub</a>
+    </footer>
       </div>
     
     

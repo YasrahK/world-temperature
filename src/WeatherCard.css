@@ -22,7 +22,7 @@
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.WeatherCard .card .sunrise {
+div.WeatherCard .sunrise {
     background-image: linear-gradient(
         to bottom,
         #1b80ac 0%,
