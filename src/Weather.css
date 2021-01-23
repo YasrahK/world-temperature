@@ -5,12 +5,9 @@
  
 }
 
-.Weather {
-    background-color: cadetblue;
-}
 
 .Weather .searchEngine{
-    max-width: 350px;
+    max-width: 375px;
     
  
 }
@@ -27,6 +24,6 @@
 .Weather form{
     text-align: center;
     margin-left: 15px;
-
 }
+
 

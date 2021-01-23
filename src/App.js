@@ -9,11 +9,12 @@ import headerImage from "./images/globe.png";
 export default function App() {
   return (
     <div className="App">
-         <div className="container">  
-      <header>
+        <header>
         <img src={headerImage} alt="Happy World" /> 
         <h1>What temperature is it?</h1>
       </header>
+         <div className="container">  
+    
    
         <div className="WeatherApp row mt-5">
          <div className="col-4">

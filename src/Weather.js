@@ -11,6 +11,8 @@ export default function Weather(props){
 
   function handleResponse(response){
     setWeatherInfo({
+      timezoneDifference: response.data.timezone,
+      timezone: new Date(Date.now() +response.data.timezone*1000),
       city: response.data.name,
       temperature: response.data.main.temp,
       feelsLike: response.data.main.feels_like,
@@ -21,7 +23,7 @@ export default function Weather(props){
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
       date: new Date (response.data.dt*1000),
-      searched:true, 
+      searched:true
     });
   }
 
