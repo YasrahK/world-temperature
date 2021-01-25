@@ -23,14 +23,14 @@ padding: 30px 20px;
 
 
 .App header h1{
-  font-family: "Papyrus", fantasy;
+  font-family: initial;
   margin: -120px 150px;
   padding-right: 750px;
   font-size: 80px;
   color: whitesmoke;
-  text-shadow: 1px 1px #bdf18d, 
+  text-shadow: 1px 1px #f0f1ed, 
   2px 2px #0f0e0d, 
-  3px 3px #b8eb67;
+  3px 3px #f1f3ef;
   display: block;
   padding-bottom: 100px;
 }
