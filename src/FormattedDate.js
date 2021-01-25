@@ -17,7 +17,7 @@ export default function FormattedDate(props) {
     const months=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     let month= months[props.date.getMonth()]
 
-    
+    let year=props.date.getFullYear();
 
     function date(){
         let dateNumber = props.date.getDate();
@@ -37,7 +37,7 @@ export default function FormattedDate(props) {
     }
 
         return(
-            <div className="dateFormat"> {month} {date()}, {day} <br />
+            <div className="dateFormat"> {month} {date()},{year} {day} <br />
              <small className="localTime"> {hours}:{minutes} Local Time </small>
              </div>
         );

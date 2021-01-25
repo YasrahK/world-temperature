@@ -43,7 +43,7 @@ export default function Weather(props){
   }
 
   function showPosition(position){
-    let latitude= position.coord.latitude;
+    let latitude= position.coords.latitude;
     let longitude= position.coords.longitude;
     const apiKey= `5fc324aaf951a7a1b818994b70c47e36`
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`

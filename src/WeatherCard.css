@@ -1,7 +1,7 @@
 
 .WeatherCard {
-    max-width: 300px;
-    min-width: 300px;
+    max-width: 350px;
+    min-width: 350px;
     
 }
 
@@ -15,14 +15,6 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
     border-radius: 10px;
-   
-
-}
- .WeatherCard .card:hover {
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-}
-
-div.WeatherCard .sunrise {
     background-image: linear-gradient(
         to bottom,
         #1b80ac 0%,
@@ -35,7 +27,27 @@ div.WeatherCard .sunrise {
         #f3a469 75%,
         #f7c978 100%
     );
-    border-radius: 10px;
-    z-index:0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+ .WeatherCard .card:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.WeatherCard .card .evening{
+    background-image: linear-gradient(
+        to bottom,
+        #1b80ac 0%,
+        #7b5fac 15%,
+        #8f6aae 20%,
+        #a86aa4 30%,
+        #cc6b8e 40%,
+        #cc6b8e 50%,
+        #f18271 60%,
+        #f3a469 75%,
+        #f7c978 100%
+    );
+ 
+  
 }
 
