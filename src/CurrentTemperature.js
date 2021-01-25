@@ -19,7 +19,7 @@ export default function CurrentTemperature(props){
         <div className="CurrentTemperature">
         <div className="float-left">
         <span className="TempToday"> {Math.round(props.celcius)} </span>
-        <span className="unit"> °C| <a href="/" onClick={showFahrenheit}>°F
+        <span className="unit"> °C | <a href="/" onClick={showFahrenheit}>°F
         </a>
         </span>
         </div>
@@ -30,7 +30,7 @@ export default function CurrentTemperature(props){
         <div className="CurrentTemperature">
         <div className="float-left">
         <span className="TempToday"> {Math.round(fahrenheit())} </span>
-        <span className="unit"><a href="/" onClick={showCelcius} > °C </a>| °F 
+        <span className="unit"><a href="/" onClick={showCelcius} > °C </a> | °F 
         </span>
         </div>
         </div>
