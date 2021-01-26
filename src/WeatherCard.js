@@ -34,7 +34,7 @@ return(
         <div className="card-body">
                 <h1> {props.data.city} </h1>
         <h2 className="description text-capitalize">{props.data.description}</h2>
-        <h3> <FormattedDate date={props.data.timezone} /> </h3>
+        <h3> <FormattedDate date={props.data.date} /> </h3>
        
         <div className="CurrentWeather row">
              <div className="col-6">
@@ -51,7 +51,7 @@ return(
                <ul>
                 <li className="humid"><FontAwesomeIcon icon="tint"/> Humidity: {props.data.humidity}%  </li>
                 <li> <FontAwesomeIcon icon="wind"/> Wind: {Math.round(props.data.wind)}km/hr </li> 
-                <li> <FontAwesomeIcon icon="thermometer-full"/> Feels like: {Math.round(props.data.feels_like)}°</li> 
+                <li> <FontAwesomeIcon icon="thermometer-full"/> Feels like: {Math.round(props.data.feelsLike)}°</li> 
                  </ul>
              </div>
            </div>

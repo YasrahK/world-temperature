@@ -10,7 +10,9 @@ export default function Weather(props){
   const[weatherInfo, setWeatherInfo]= useState({searched:false});
 
   function handleResponse(response){
+    console.log(response.data);
     setWeatherInfo({
+      date: new Date (response.data.dt*1000),
       timezoneDifference: response.data.timezone,
       timezone: new Date(Date.now() +response.data.timezone*1000),
       city: response.data.name,
@@ -22,7 +24,7 @@ export default function Weather(props){
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
-      date: new Date (response.data.dt*1000),
+     
       searched:true
     });
   }
