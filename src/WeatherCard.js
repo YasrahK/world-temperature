@@ -6,19 +6,19 @@ import "./WeatherCard.css";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherCard(props){
-let time = props.data.timezone.getHours()
+let timezone = props.data.timezone.getHours();
 
 function morning(){
-  if (time >=5 && time < 8){
+  if (timezone >=5 && timezone < 8){
     return("sunrise")
   } else {
-    if( time >=8 && time < 12){
+    if( timezone >=8 && timezone < 12){
       return("morning")
     } else {
-      if (time >=12 && time < 18) {
+      if (timezone >=12 && timezone < 18) {
         return("afternoon")
       } else {
-        if(time >=18 && time < 20) {
+        if(timezone >=18 && timezone < 20) {
           return("evening")
         } else {
           return("night")
@@ -54,6 +54,7 @@ return(
                 <li> <FontAwesomeIcon icon="thermometer-full"/> Feels like: {Math.round(props.data.feelsLike)}°</li> 
                  </ul>
              </div>
+           
            </div>
            </div>
            </div>

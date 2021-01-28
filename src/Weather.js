@@ -10,9 +10,8 @@ export default function Weather(props){
   const[weatherInfo, setWeatherInfo]= useState({searched:false});
 
   function handleResponse(response){
-    console.log(response.data);
+
     setWeatherInfo({
-     
       timezoneDifference: response.data.timezone,
       timezone: new Date(Date.now()+response.data.timezone*1000),
       city: response.data.name,
