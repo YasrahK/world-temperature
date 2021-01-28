@@ -12,9 +12,9 @@ export default function Weather(props){
   function handleResponse(response){
     console.log(response.data);
     setWeatherInfo({
-      date: new Date (response.data.dt*1000),
+     
       timezoneDifference: response.data.timezone,
-      timezone: new Date(Date.now() +response.data.timezone*1000),
+      timezone: new Date(Date.now()+response.data.timezone*1000),
       city: response.data.name,
       temperature: response.data.main.temp,
       feelsLike: response.data.main.feels_like,
@@ -23,6 +23,7 @@ export default function Weather(props){
       minTemperature: response.data.main.temp_min,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
+      date: new Date (response.data.dt*1000),
       icon: response.data.weather[0].icon,
      
       searched:true

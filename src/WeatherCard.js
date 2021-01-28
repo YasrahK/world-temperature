@@ -34,7 +34,7 @@ return(
         <div className="card-body">
                 <h1> {props.data.city} </h1>
         <h2 className="description text-capitalize">{props.data.description}</h2>
-        <h3> <FormattedDate date={props.data.date} /> </h3>
+        <h3> <FormattedDate date={props.data.timezone} /> </h3>
        
         <div className="CurrentWeather row">
              <div className="col-6">

@@ -11,7 +11,7 @@ export default function FormattedDate(props) {
             minutes= `0${minutes}`;
         }
 
-        const days=["Sunday", "Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        const days=["Sunday", "Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"]
     let day = days[props.date.getDay()];
 
     const months=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
