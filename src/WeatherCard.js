@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CurrentTemperature from "./CurrentTemperature";
 import "./WeatherCard.css";
 import WeatherIcon from "./WeatherIcon";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherCard(props){
 let timezone = props.data.timezone.getHours();
@@ -54,7 +55,9 @@ return(
                 <li> <FontAwesomeIcon icon="thermometer-full"/> Feels like: {Math.round(props.data.feelsLike)}°</li> 
                  </ul>
              </div>
-           
+              <div className="forecast">
+                <WeatherForecast city={props.data.city}/>
+              </div>
            </div>
            </div>
            </div>
