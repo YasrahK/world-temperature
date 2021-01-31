@@ -23,30 +23,30 @@
 }
 
 .WeatherCard .card .sunrise{
-    background-image: url("./images/sunrise.jpg");
+background-image: radial-gradient( circle farthest-corner at 48.3% 93.5%,  rgba(177,95,15,1) 0.2%, rgba(36,123,183,1) 93% );
+
  
 }
 
 .WeatherCard .card .morning{
-    background-image: url("./images/morning.jpg");
+    background-image: radial-gradient( circle farthest-corner at 6.4% 85.5%,  rgba(93,183,219,1) 0.1%, rgba(247,250,253,1) 99.3%, rgba(136,159,192,1) 99.5% );
  
   
 }
 
 .WeatherCard .card .afternoon{
-    background-image: url("./images/afternoon.jpg");
- 
+    background-image: radial-gradient( circle farthest-corner at -4.5% -4.3%,  rgba(202,166,232,0.45) 0%, rgba(148,193,209,1) 15.9%, rgba(227,209,168,0.45) 47.5%, rgba(171,204,237,1) 85.3%, rgba(154,202,251,1) 95.6% );
   
 }
 .WeatherCard .card .evening{
-    background-image: url("./images/evening.jpg");
+    background-image: radial-gradient( circle farthest-corner at 107.9% 90.5%,  rgba(238,184,57,1) 0%, rgba(160,162,146,1) 36.7%, rgba(47,56,86,1) 90% );
     color: azure;
  
   
 }
 
 .WeatherCard .card .night{
-    background-image: url("./images/nightt.jpg");
+    background-image: linear-gradient( 89.7deg,  rgba(0,0,0,1) -10.7%, rgba(53,92,125,1) 88.8% );
     color: azure;
   
 }

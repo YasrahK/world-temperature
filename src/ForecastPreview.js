@@ -1,6 +1,7 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 
+
 export default function ForecastPreview(props) {
 
 function hours(){
@@ -11,9 +12,11 @@ function hours(){
 
 
 function temperature() {
-    let temperature = Math.round(props.data.main.temp);
-
-    return `${temperature}°C`;
+    if(props.unit==="°C"){
+        return `${Math.round(props.data.main.temp)}°C`
+    } else{
+        return `${Math.round(props.data.main.temp* 9/5 +32)}°F`
+    }
   }
     return(
         <div className="ForecastPreview col">
