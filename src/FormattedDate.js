@@ -1,17 +1,8 @@
 import React from "react";
 import "./FormattedDate.css";
+import Time from "./Time";
 export default function FormattedDate(props) {
-        
-        let hours= props.date.getHours();
-        if(hours<10){
-            hours=`0${hours}`;
-        }
-        let minutes = props.date.getMinutes();
-        if(minutes<10){
-            minutes= `0${minutes}`;
-        }
-
-        const days=["Sunday", "Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const days=["Sunday", "Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"];
     let day = days[props.date.getDay()];
 
     const months=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -36,9 +27,13 @@ export default function FormattedDate(props) {
         }
     }
 
+    function localTime(){
+        return<Time time={props.date} />
+    }
+
         return(
             <div className="dateFormat"> {month} {date()},{year} {day} <br />
-             <small className="localTime"> {hours}:{minutes} Local Time </small>
+            <p> {localTime()} <small className="localTime"> Local Time </small> </p>
              </div>
         );
 }
