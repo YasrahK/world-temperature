@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CurrentTemperature from "./CurrentTemperature";
@@ -7,7 +7,8 @@ import WeatherIcon from "./WeatherIcon";
 import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherCard(props){
-let timezone = props.data.timezone.getHours();
+let timezone = props.data.date.getHours();
+const [unit, setUnit] = useState("celcius");
 
 function morning(){
   if (timezone >=5 && timezone < 8){
@@ -35,7 +36,7 @@ return(
         <div className="card-body">
                 <h1> {props.data.city} </h1>
         <h2 className="description text-capitalize">{props.data.description}</h2>
-        <h3> <FormattedDate date={props.data.timezone} /> </h3>
+        <h3> <FormattedDate date={props.data.date} /> </h3>
        
         <div className="CurrentWeather row">
              <div className="col-6">
@@ -45,7 +46,7 @@ return(
                </div>
              </div>
              <div className="temperatureDisplay">
-             <CurrentTemperature celcius={props.data.temperature} />
+             <CurrentTemperature celcius={props.data.temperature} unit={unit} setUnit={setUnit}/>
              </div>
                </div>
              <div className="col-6 weatherAttributes">
@@ -56,7 +57,7 @@ return(
                  </ul>
              </div>
               <div className="forecast">
-                <WeatherForecast city={props.data.city}/>
+                <WeatherForecast city={props.data.city} unit={unit} />
               </div>
            </div>
            </div>

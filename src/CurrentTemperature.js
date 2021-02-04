@@ -1,20 +1,18 @@
-import React, {useState} from "react";
+import React from "react";
 
 export default function CurrentTemperature(props){
-    const[unit, setUnit]= useState("celcius");
-
     function showFahrenheit(event){
         event.preventDefault();
-        setUnit("fahrenheit");
+        props.setUnit("fahrenheit");
     }
     function showCelcius(event){
         event.preventDefault();
-        setUnit("celcius");
+        props.setUnit("celcius");
     }
     function fahrenheit(){
         return(props.celcius *9)/5+32;
     }
-    if (unit === "celcius") {
+    if (props.unit === "celcius") {
     return(
         <div className="CurrentTemperature">
         <div className="float-left">
