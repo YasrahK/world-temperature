@@ -1,8 +1,16 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import "./ForecastPreview.css";
-import Time from "./Time";
+
+
 export default function ForecastPreview(props) {
+
+function hours(){
+  let date = new Date(Date.now() + props.data.dt * 1000);
+  let hours= date.getHours();
+  return`${hours}:00`;
+}
+
   function temperature() {
     if (props.unit === "celcius") {
       return `${Math.round(props.data.main.temp_min)} | 
@@ -15,7 +23,7 @@ export default function ForecastPreview(props) {
   }
   return (
     <div className="ForecastPreview col">
-      <Time time={new Date((props.data.dt + props.timezone) * 1000)} />
+      {hours()}
       <WeatherIcon code={props.data.weather[0].icon} />
       {temperature()}
       <hr />

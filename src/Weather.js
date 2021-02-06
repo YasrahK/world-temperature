@@ -23,7 +23,7 @@ export default function Weather(props){
       wind: response.data.wind.speed,
       date: new Date (localTime * 1000),
       icon: response.data.weather[0].icon,
-     
+      timezoneDifference: response.data.timezone,
       searched:true
     });
   }

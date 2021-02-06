@@ -1,35 +1,56 @@
-
-
 import React, { useState } from "react";
 import axios from "axios";
 
 import ForecastPreview from "./ForecastPreview";
-import  "./WeatherForecast.css";
+import "./WeatherForecast.css";
 
 export default function WeatherForecast(props) {
-const[loaded, setLoaded] = useState(false);
-const[forecast, setForecast] = useState(null);
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
 
-    function handleForecastResponse(response) {
-        setForecast(response.data);
-        setLoaded(true);
-       
-    }
-    if(loaded && props.city===forecast.city.name) {
-    return(
-        <div className="WeatherForecast row">
-            <ForecastPreview data={forecast.list[0]} unit={props.unit}/>
-            <ForecastPreview data={forecast.list[1]} unit={props.unit}/>
-            <ForecastPreview data={forecast.list[2]} unit={props.unit}/>
-            <ForecastPreview data={forecast.list[3]} unit={props.unit}/>
-            <ForecastPreview data={forecast.list[4]} unit={props.unit}/>
-            <ForecastPreview data={forecast.list[5]} unit={props.unit}/>
-           </div>
+  function handleForecastResponse(response) {
+    setForecast(response.data);
+    setLoaded(true);
+  }
+  if (loaded && props.city === forecast.city.name) {
+    return (
+      <div className="WeatherForecast row">
+        <ForecastPreview
+          data={forecast.list[0]}
+          timezone={forecast.city.timezone}
+          unit={props.unit}
+        />
+        <ForecastPreview
+          data={forecast.list[1]}
+          timezone={forecast.city.timezone}
+          unit={props.unit}
+        />
+        <ForecastPreview
+          data={forecast.list[2]}
+          timezone={forecast.city.timezone}
+          unit={props.unit}
+        />
+        <ForecastPreview
+          data={forecast.list[3]}
+          timezone={forecast.city.timezone}
+          unit={props.unit}
+        />
+        <ForecastPreview
+          data={forecast.list[4]}
+          timezone={forecast.city.timezone}
+          unit={props.unit}
+        />
+        <ForecastPreview
+          data={forecast.list[5]}
+          timezone={forecast.city.timezone}
+          unit={props.unit}
+        />
+      </div>
     );
-} else {
+  } else {
     let apiKey = "5fc324aaf951a7a1b818994b70c47e36";
-    let url= `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(handleForecastResponse);
     return "Chicago";
-}
+  }
 }
